@@ -103,7 +103,7 @@ const Resume: React.FC = () => {
                 </i>
               </div>
               <div className="text-right">
-                <p className="text-gray-600 font-serif">{cvData.education.postGraduateDuration?.duration.from} - {cvData.education.postGraduateDuration?.duration.to}</p>
+                <p className="text-gray-600 font-serif">{formatDate(cvData.education.postGraduateDuration?.duration.from!)} - {formatDate(cvData.education.postGraduateDuration?.duration.to!)}</p>
                 <p className="text-gray-600 font-bold font-serif">GPA: {JSON.stringify(cvData.education.postGraduateGPA)}/10</p>
               </div>
             </div>}
@@ -118,7 +118,7 @@ const Resume: React.FC = () => {
                 </i>
               </div>
               <div className="text-right">
-                <p className="text-gray-600 font-serif">{cvData?.education?.underGraduateDuration?.duration?.from} - {cvData?.education?.underGraduateDuration?.duration?.to}</p>
+                <p className="text-gray-600 font-serif">{formatDate(cvData?.education?.underGraduateDuration?.duration?.from!)} - {formatDate(cvData?.education?.underGraduateDuration?.duration?.to!)}</p>
                 <p className="text-gray-600 font-bold font-serif">GPA: {JSON.stringify(cvData.education.underGraduateGPA)}/10</p>
               </div>
             </div>}
@@ -217,7 +217,7 @@ const Resume: React.FC = () => {
               <div className="flex justify-between items-center">
                 <h3 className="font-bold text-[#006666]">{project.project_name}</h3>
                 <p className="text-gray-600 text-right">
-                  {formatDate(project.duration.from)} - {project.duration.to}
+                  {formatDate(project.duration.from)} - {formatDate(project.duration.to)}
                 </p>
               </div>
               <ul className="list-disc list-inside text-gray-600 mt-2 pl-6">

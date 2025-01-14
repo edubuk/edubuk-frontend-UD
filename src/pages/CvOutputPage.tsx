@@ -60,7 +60,7 @@ const CvOutputPage = () => {
       <h1 className="text-md md:text-2xl text-center font-semibold text-[#006666]">
         Verified Curriculum Vitae (CV) on the Blockchain
       </h1>
-      <a className="border border-gray-500 p-2 rounded-lg hover:text-[#006666]" href={`https://www.edubukcvonchain.xyz/new-cv/${id}`}>View Other Template</a>
+      <a className="border border-gray-500 p-2 rounded-lg hover:text-[#006666]" href={`https://www.edubukcvonchain.xyz/new-cv/${id}`} target="_blank">View Other Template</a>
       </div>
       <div className="mt-2 max-w-6xl mx-auto w-full border  border-l-0 shadow-lg   rounded-md overflow-x-scroll xl:overflow-x-clip">
         {/* main */}
@@ -120,14 +120,16 @@ const CvOutputPage = () => {
                         fillcheckClass="mt-1"
                         linkClass="text-[#FB980E] font-semibold text-md mt-2"
                       />
-                      <div className="flex justify-end text-nowrap">
-                        <span className="font-normal text-sm">
-                          - Degree ({cvData.education.postGraduateDegree})
-                        </span>
-                        <span className="font-normal text-sm">
-                          , GPA{" "}
-                          {JSON.stringify(cvData.education.postGraduateGPA)}
-                        </span>
+                      <div className="flex flex-col justify-end text-wrap">
+                        <p className="font-normal text-sm">
+                        <strong>Degree: </strong> <i>({cvData.education.postGraduateDegree})</i>
+                        </p>
+                        <p>
+                        <strong>GPA:</strong> <i>{JSON.stringify(cvData.education.postGraduateGPA)}</i>
+                        </p>
+                        <p className="font-normal text-sm">
+                          <i>{cvData.education.postGraduateDuration?.duration.from}</i> - <i>{cvData.education.postGraduateDuration?.duration.to}</i>
+                        </p>
                       </div>
                     </div>
                   )}
@@ -152,14 +154,16 @@ const CvOutputPage = () => {
                         fillcheckClass="mt-2"
                         linkClass="text-[#FB980E] font-semibold text-md mt-2"
                       />
-                      <div className="flex justify-end text-nowrap">
-                        <span className="font-normal text-sm">
-                          - Degree ({cvData.education.underGraduateDegree})
-                        </span>
-                        <span className="font-normal text-sm">
-                          , GPA{" "}
-                          {JSON.stringify(cvData.education.underGraduateGPA)}
-                        </span>
+                      <div className="flex flex-col justify-end text-wrap">
+                        <p className="font-normal text-sm">
+                        <strong>Degree: </strong> <i>({cvData.education.underGraduateDegree})</i>
+                        </p>
+                        <p>
+                        <strong>GPA:</strong> <i>{JSON.stringify(cvData.education.underGraduateGPA)}</i>
+                        </p>
+                        <p className="font-normal text-sm">
+                          <i>{cvData.education.underGraduateDuration?.duration.from}</i> - <i>{cvData.education.underGraduateDuration?.duration.to}</i>
+                        </p>
                       </div>
                     </div>
                   )}
