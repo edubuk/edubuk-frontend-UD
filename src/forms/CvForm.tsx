@@ -598,7 +598,7 @@ const CvForm = () => {
 ) : (
   <div className="flex gap-2 w-full flex-col sm:flex-row">
     {
-    step===6&&
+    step===6&&localStorage.getItem("txStatus")&&
     <Button
       type="button"
       onClick={stepsHandler}
@@ -647,7 +647,7 @@ const CvForm = () => {
           <div className="flex justify-center items-center w-auto sm:w-full">
             <a
               className="w-full px-2 py-1 text-center items-center border rounded hover:bg-[#f8f9fa] font-semibold hover:opacity-90"
-              href={`https://xdcscan.com/tx/${txHash}`}
+              href={`https://polygonscan.com/tx/${txHash}`}
               target="_blank"
               rel="noopener noreferrer"
             >
