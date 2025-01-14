@@ -55,7 +55,7 @@ const DashBoard = () => {
       const id=toast.loading("document fetching...")
       try{
         const loginMailId= sessionStorage.getItem("userMailId");
-        const response = await fetch(`${API_BASE_URL}/cv/getCvIds/${loginMailId}`, {
+        const response = await fetch(`${API_BASE_URL}cv/getCvIds/${loginMailId}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
