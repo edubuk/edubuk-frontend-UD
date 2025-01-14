@@ -18,13 +18,20 @@ const CvOutputPage = () => {
   const { cvData, isLoading } = useGetCv(id);
   console.log(cvData);
   if (isLoading) {
-    return <h1>Loading</h1>;
+    return(
+    <div className="flex justify-center items-center">
+      <h1 className="text-4xl font-bold text-[#006666]">Loading</h1>
+    </div>
+    );
   }
 
   if (!cvData) {
-    return <h1>No cv found</h1>;
+    return(
+      <div className="flex justify-center items-center">
+        <h1 className="text-4xl font-bold text-[#006666]">No CV Found</h1>
+      </div>
+      );
   }
-  console.log(cvData.experienceVerifications);
   return (
     <div className="px-1 mt-5 md:mt-0 md:px-10 mb-10 overflow-hidden">
       {/* <div className="border flex">
