@@ -31,8 +31,14 @@ const Resume: React.FC = () => {
   console.log(cvData);
   if (isLoading) {
     return(
-    <div className="flex justify-center items-center">
-      <h1 className="text-4xl font-bold text-[#006666]">Loading</h1>
+      <div className="flex justify-center items-center gap-3 flex-col h-[70vh]">
+      <h1 className="text-4xl font-bold text-[#006666]">Loading...</h1>
+      <img
+          src="/edubuklogo.png"
+          alt="logo"
+          className="md:h-20 md:w-20 h-20 w-20 object-cover animate-spin"
+          draggable={false}
+        />
     </div>
     );
   }

@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 
 export const useCV = () => {
   const navigate = useNavigate();
-
   const createCV = async (
     formData: CvFormDataType
   ): Promise<Cv_resoponse_type> => {
@@ -18,7 +17,7 @@ export const useCV = () => {
       body: JSON.stringify(formData),
     });
 
-    console.log("response while creating the cv:",response);
+    //console.log("response while creating the cv:",response);
     if (!response.ok) {
       throw new Error("Could not create cv at the moment try again latter");
     }
@@ -36,6 +35,7 @@ export const useCV = () => {
         const { _id: id } = data;
         navigate(`/cv/${id}`);
         localStorage.clear();
+        window.location.reload();
       }
     },
   });
