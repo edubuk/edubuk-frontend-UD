@@ -493,7 +493,7 @@ const CvForm = () => {
       const hashArray: string[] = JSON.parse(
         localStorage.getItem("hashArray") || "[]"
       );
-      console.log("hashArray", hashArray);
+      //console.log("hashArray", hashArray);
       const contractNFT = await getNFTContract();
       //const tx = await contract?.addStudentData("Ajeet",hashArray);
       const tx = await contractNFT?.safeMint(account, hashArray);
@@ -598,7 +598,7 @@ const CvForm = () => {
 ) : (
   <div className="flex gap-2 w-full flex-col sm:flex-row">
     {
-    step===6&&
+    step===6&&localStorage.getItem("txStatus")&&
     <Button
       type="button"
       onClick={stepsHandler}
