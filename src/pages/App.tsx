@@ -11,12 +11,13 @@ import About from "./pages/About";
 import TermsAndConditions from "./pages/TermCond";
 import CancellationPolicy from "./pages/CancellationPol";
 import ContactUs from "./pages/ContactUs";
+
 function App() {
   return (
     <>
     <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home />} />
         <Route path="new-cv/:id" element={<Resume />}></Route>
         <Route path="/refund-policy" element={<RefundPolicy />}></Route>
         <Route path="/about-us" element={<About />}></Route>

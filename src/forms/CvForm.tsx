@@ -125,11 +125,6 @@ const CvForm = () => {
     }
   }, [step]);
 
-  // const onImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   if (!event.target.files) return null;
-  //   const file = event.target.files[0];
-  //   setImagePreview(file ? URL.createObjectURL(file) : null);
-  // };
 
   const handleProfessionSelect = (profession: string) => {
     form.setValue("profession", profession);
