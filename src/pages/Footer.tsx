@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
           {/* Logo Section */}
           <div className="flex flex-col items-center gap-3">
             <div className="flex items-center gap-2">
-              <img src="/newlogo.jpg" alt="logo" className="w-16 h-16 mt-2" />
+              <img src="/newlogo.jpg" alt="logo" className="w-16 h-18 mt-2" />
               <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-700 via-orange-500 to-blue-500 bg-clip-text text-transparent">
                 Edubuk
               </h1>

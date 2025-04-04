@@ -68,7 +68,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between items-center px-8 py-4 w-screen h-[20vh]">
-      <img src={logo} alt="Logo" className="h-16 w-16" />
+      <img src={logo} alt="Logo" className="h-18 w-16" />
       <div className="flex gap-2 justify-between items-center">
       <div className=" space-x-6 hidden md:block">
         {links?.map((link, i) =>
