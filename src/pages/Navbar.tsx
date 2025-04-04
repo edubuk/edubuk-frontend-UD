@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/EdubukLogoClean.png";
+import logo from "../assets/newlogo.jpg";
 import { Link, useLocation } from "react-router-dom";
 import { handleConnect, logout } from "@/Web3Auth/Web3AuthLogin";
 
